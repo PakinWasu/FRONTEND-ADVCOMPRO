@@ -4,7 +4,7 @@ const app = express();
 var bodyParser = require('body-parser');
 const path = require('path')
 
-const base_url = "https://node65663-pakin-app.proen.app.ruk-com.cloud/";
+const base_url = "https://node65663-pakin-app.proen.app.ruk-com.cloud";
 
 // const base_url = "http://localhost:3000";
 
