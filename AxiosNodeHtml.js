@@ -4,9 +4,9 @@ const app = express();
 var bodyParser = require('body-parser');
 const path = require('path')
 
-const base_url = "https://node65663-pakin-app.proen.app.ruk-com.cloud";
+// const base_url = "https://node65663-pakin-app.proen.app.ruk-com.cloud";
 
-// const base_url = "http://localhost:3000";
+const base_url = "http://localhost:3000";
 
 app.set('views',path.join(__dirname,"/public/views"))
 app.set('view engine', 'ejs');
@@ -82,6 +82,7 @@ app.get("/delete/:id", async (req, res) => {
     }
 });
 
-app.listen(5500, () => {
-    console.log('Server started on port 5500');
-})
+const PORT = process.env.PORT || 5500;
+app.listen(PORT, () => {
+  console.log(`Server started at http://localhost:${PORT}`);
+});
